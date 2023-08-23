@@ -1,0 +1,39 @@
+/* Arabic text adjustment */
+
+.rtl {
+    direction: rtl;
+}
+
+.ltr {
+    direction: ltr;
+}
+
+.arabic {
+    font-family: Cairo;
+}
+
+.arabic.sm {
+    font-size: 0.9rem;
+}
+
+.arabic.xs {
+    font-size: 0.8rem;
+}
+
+
+/* Colors adjustment */
+
+/* Sidebar color */
+.main-sidebar {
+    background-color: #242433;
+}
+
+/* Top navbar color */
+.navbar {
+    background-color: #7ab8db;
+}
+
+/* Page color */
+.content-wrapper {
+    background-color: #f4f6f9;
+}
