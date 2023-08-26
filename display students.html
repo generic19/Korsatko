@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Korsatko</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&family=Cairo:wght@300;400;700&display=fallback">
+        
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="plugins/adminlte/css/adminlte-rtl.css">
+    
+    <link rel="stylesheet" href="dist/css/style.css">
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed rtl">
+    <!-- Site wrapper -->
+    <div class="wrapper">
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="../../index3.html" class="nav-link active">
+                        <p class="arabic">الصفحة الرئيسية</p>
+                    </a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="#" class="nav-link">
+                        <p class="arabic">الدعم التقني</p>
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto">
+                <!-- Notifications Dropdown Menu -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link" data-toggle="dropdown" href="#">
+                        <i class="far fa-bell"></i>
+                        <span class="badge badge-danger navbar-badge">8</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                        <span class="dropdown-item dropdown-header">
+                            <p class="arabic xs">
+                                8 إشعارات جديدة
+                            </p>
+                        </span>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">
+                            <i class="fas fa-exclamation-triangle mr-2"></i>
+                            <span class="arabic">
+                                5 تنبيهات
+                            </span>
+                            <span class="float-left text-muted text-sm">3 mins</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">
+                            <i class="fas fa-file mr-2"></i>
+                            <span class="arabic">
+                                3 تقارير
+                            </span>
+                            <span class="float-left text-muted text-sm">2 days</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item dropdown-footer">
+                            <p class="arabic sm">
+                                الإطلاع على جميع الإشعارات
+                            </p>
+                        </a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.navbar -->
+
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
+            <a href="index.html" class="brand-link">
+                <img src="dist/img/k-logo-t.png" alt="Korsatko Logo" class="brand-image">
+                <span class="brand-text font-weight-light">Korsatko</span>
+            </a>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                        data-accordion="false">
+                        
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p class="arabic">
+                                    لوحة القيادة
+                                </p>
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-book"></i>
+                                <p class="arabic">الكورسات</p>
+                                <i class="fas fa-angle-left left"></i>
+                            </a>
+                            
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="nav-icon fas fa-table"></i>
+                                        <p class="arabic">عرض الكورسات</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="nav-icon fas fa-table"></i>
+                                        <p class="arabic">عرض المواعيد</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="nav-icon fas fa-plus"></i>
+                                        <p class="arabic">إضافة كورس</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="nav-icon fas fa-plus"></i>
+                                        <p class="arabic">إضافة معاد لكورس</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-chalkboard-teacher"></i>
+                                <p class="arabic">المدربين</p>
+                                <i class="fas fa-angle-left left"></i>
+                            </a>
+                            
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="nav-icon fas fa-table"></i>
+                                        <p class="arabic">عرض المدربين</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="nav-icon fas fa-plus"></i>
+                                        <p class="arabic">إضافة مدرب</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-book-reader"></i>
+                                <p class="arabic">الطلاب</p>
+                                <i class="fas fa-angle-left left"></i>
+                            </a>
+                            
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="nav-icon fas fa-table"></i>
+                                        <p class="arabic">عرض الطلاب</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="nav-icon fas fa-plus"></i>
+                                        <p class="arabic">إضافة طالب</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="nav-icon fas fa-user-plus"></i>
+                                        <p class="arabic">تسجيل طالب بكورس</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            
+            <!-- Content Header (Page header) -->
+            <section class="content-header mb-2 mx-2">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <h1 class="arabic">عرض الطلاب</h1>
+                    </div>
+                    
+                    <div class="row">
+                        <ol class="breadcrumb arabic sm">
+                            <li class="breadcrumb-item">
+                                <a href="#">عرض الطلاب</a>
+                            </li>
+                            <li class="breadcrumb-item">الصفحة الحالية</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Main content -->
+            <section class="content">
+
+                <div class="container-fluid">
+                    <div class="row">
+                                
+                                <div class="card-body">
+                                    <form action="#" method="post">
+                                        <div class="col-30 col-md-20 mx-auto">
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <h4 class="card-title">
+                                                        <span class="arabic h5">عرض الطلاب </span>
+
+                                                    </h4>
+                                                    <div class="card-tools">
+                                                      <div class="input-group input-group-sm" style="width: 200px;">
+                                                      <input type="text" name="search" class="form-control float-left" placeholder="Search">
+                                                      <div class="input-group-append">
+                                                        <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
+                                                      </div>
+
+                                                     <button type="button" class="btn btn-tool" >
+                                                     </button>
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <div class="card-body">
+                                                    <table class="table table-bordered table-striped">
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="arabic">الاسم بالكامل</th>
+                                                                <th class="arabic">الرقم القومي</th>
+                                                                <th class="arabic">تاريخ الميلاد</th>
+                                                                <th class="arabic">البريد الإلكتروني</th>
+                                                                <th class="arabic">رقم الهاتف</th>
+                                                                <th class="arabic">الجنس</th>
+                
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <!-- Add rows of student data here -->
+                                                            <tr>
+                                                                <td>جنى محمد</td>
+                                                                <td>3020722123476</td>
+                                                                <td>22-07-2002</td>
+                                                                <td>jana@example.com</td>
+                                                                <td>0123456789</td>
+                                                                <td>انثى</td>
+                                                                <td> <div class="container">
+                                                                    <div class="row">
+                                                                        <div class="col-md-6">
+                                                                            <button type="submit" class="btn btn-info">تعديل</button>
+                            
+                                                                        </div>
+                                                                        <div class="col-md-5">
+                                                                            <button type="submit" class="btn float-right btn-danger">حذف</button>
+                            
+                                                                        </div>
+                                                                    </div>
+                                                                    </div></td>
+                                                                
+                                                            </tr>
+                                                            <tr>
+                                                                <td>فاطمة احمد</td>
+                                                                <td>3020722123476</td>
+                                                                <td>1998-09-20</td>
+                                                                <td>fatima@example.com</td>
+                                                                <td>01234567869</td>
+                                                                <td>انثى</td>
+                                                                <td> <div class="container">
+                                                                    <div class="row">
+                                                                        <div class="col-md-6">
+                                                                            <button type="submit" class="btn btn-info">تعديل</button>
+                            
+                                                                        </div>
+                                                                        <div class="col-md-5">
+                                                                            <button type="submit" class="btn float-right btn-danger">حذف</button>
+                            
+                                                                        </div>
+                                                                    </div>
+                                                                    </div></td>
+                
+                                                            </tr>
+                                                            <tr>
+                                                                <td> وائل محمد</td>
+                                                                <td>20145873269</td>
+                                                                <td>1997-03-12</td>
+                                                                <td>mohammed@example.com</td>
+                                                                <td>0123456789</td>
+                                                                <td>ذكر</td>
+                                                                <td> <div class="container">
+                                                                    <div class="row">
+                                                                        <div class="col-md-6">
+                                                                            <button type="submit" class="btn btn-info">تعديل</button>
+                            
+                                                                        </div>
+                                                                        <div class="col-md-5">
+                                                                            <button type="submit" class="btn float-right btn-danger">حذف</button>
+                            
+                                                                        </div>
+                                                                    </div>
+                                                                    </div></td>
+                
+                                                            </tr>
+                                                            <tr>
+                                                                <td>ليلى فاروق</td>
+                                                                <td>20145278936</td>
+                                                                <td>2000-11-05</td>
+                                                                <td>layla@example.com</td>
+                                                                <td>0123456789</td>
+                                                                <td>انثى</td>
+                                                                <td> <div class="container">
+                                                                    <div class="row">
+                                                                        <div class="col-md-6">
+                                                                            <button type="submit" class="btn btn-info">تعديل</button>
+                            
+                                                                        </div>
+                                                                        <div class="col-md-5">
+                                                                            <button type="submit" class="btn float-right btn-danger">حذف</button>
+                            
+                                                                        </div>
+                                                                    </div>
+                                                                    </div></td>
+                
+                                                            </tr>
+                                                            <tr>
+                                                                <td>علي حسين</td>
+                                                                <td>2054878321</td>
+                                                                <td>1996-07-08</td>
+                                                                <td>ali@example.com</td>
+                                                                <td>0123456789</td>
+                                                                <td>ذكر</td>
+                                                                <td> <div class="container">
+                                                                    <div class="row">
+                                                                        <div class="col-md-6">
+                                                                            <button type="submit" class="btn btn-info">تعديل</button>
+                            
+                                                                        </div>
+                                                                        <div class="col-md-5">
+                                                                            <button type="submit" class="btn float-right btn-danger">حذف</button>
+                            
+                                                                        </div>
+                                                                    </div>
+                                                                    </div></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>نور محمد</td>
+                                                                <td>20545417545</td>
+                                                                <td>1999-02-25</td>
+                                                                <td>nour@example.com</td>
+                                                                <td>017894245</td>
+                                                                <td>انثى</td>
+                                                                <td> <div class="container">
+                                                                    <div class="row">
+                                                                        <div class="col-md-6">
+                                                                            <button type="submit" class="btn btn-info">تعديل</button>
+                            
+                                                                        </div>
+                                                                        <div class="col-md-5">
+                                                                            <button type="submit" class="btn float-right btn-danger">حذف</button>
+                            
+                                                                        </div>
+                                                                    </div>
+                                                                    </div></td>
+                                                            </tr>
+                                                            
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                        
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        
+                                
+                
+
+                       
+                        
+                    </div>
+                </div>
+            </section>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+       
+
+        <footer class="main-footer">
+            <div>
+                <span class="arabic sm">
+                    حقوق الطبع والنشر
+                </span>
+                <!-- <strong> -->
+                    &copy;
+                    2023
+                    Korsatko.
+                <!-- </strong> -->
+                <span class="arabic sm">
+                    جميع الحقوق محفوظة.
+                </span>
+            </div>
+        </footer>
+
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+        </aside>
+        <!-- /.control-sidebar -->
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- jQuery -->
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="plugins/adminlte/js/adminlte.min.js"></script>
+</body>
+
+</html>
