@@ -29,3 +29,25 @@
 .content-wrapper {
     background-color: #f4f6f9;
 }
+
+
+/* summernote adjustments */
+
+.note-toolbar {
+    background-color: #f8f9fa;
+    border: none;
+}
+
+.note-statusbar {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.note-editor {
+    box-shadow: none;
+    margin-bottom: 0;
+}
+
+.note-editable p {
+    margin-bottom: 0;
+}
