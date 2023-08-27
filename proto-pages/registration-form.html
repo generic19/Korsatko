@@ -434,7 +434,7 @@
             
             $("document").ready(() => {
                 $("#studentName").autocomplete({
-                    minLength: 2,
+                    minLength: 1,
                     source: Object.keys(byName),
                     select: (event, ui) => {
                         $("#studentNationalId").val(byName[ui.item.value]);
