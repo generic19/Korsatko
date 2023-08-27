@@ -68,3 +68,9 @@
 .btn-choice.arabic {
     font-size: 0.8rem;
 }
+
+/* select2 fix */
+.select2-container--bootstrap4 .select2-selection--single .select2-selection__arrow {
+    left: 3px !important;
+    right: auto !important;
+}
