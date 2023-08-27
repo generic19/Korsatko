@@ -51,3 +51,20 @@
 .note-editable p {
     margin-bottom: 0;
 }
+
+/* Choice buttons */
+.btn-choice {
+    color: #495057;
+    background-color: #E9ECEF;
+    border: 1px solid #ced4da;
+}
+
+.btn-choice.active {
+    color: white;
+    background-color: #495057;
+    border: 1px solid #E9ECEF;
+}
+
+.btn-choice.arabic {
+    font-size: 0.8rem;
+}
