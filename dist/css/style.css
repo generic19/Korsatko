@@ -74,3 +74,11 @@
     left: 3px !important;
     right: auto !important;
 }
+
+/* tempusdominus DatetimePicker fix */
+.bootstrap-datetimepicker-widget {
+    direction: ltr;
+}
+.bootstrap-datetimepicker-widget ul {
+    padding-left: 0 !important;
+}
