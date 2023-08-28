@@ -12,6 +12,9 @@
     font-family: Cairo;
 }
 
+table.arabic td {
+    font-family: Cairo;
+}
 
 /* Colors adjustment */
 
@@ -79,6 +82,57 @@
 .bootstrap-datetimepicker-widget {
     direction: ltr;
 }
+
 .bootstrap-datetimepicker-widget ul {
     padding-left: 0 !important;
+}
+
+/* DataTables fix */
+.dataTables_filter {
+    display: none;
+}
+
+table.dataTable.dtr-inline.collapsed>tbody>tr>td.dtr-control {
+    padding-left: inherit;
+    padding-right: 30px;
+}
+table.dataTable.dtr-inline.collapsed>tbody>tr>td.dtr-control:before {
+    left: inherit;
+    right: 5px;
+    height: 1em;
+    width: 1em;
+    margin-top: -9px;
+    display: block;
+    position: absolute;
+    color: #1f99eb;
+    border: none;
+    border-radius: 1em;
+    box-shadow: 0 0.1em 0.2em #00000042;
+    box-sizing: content-box;
+    text-align: center;
+    text-indent: 0 !important;
+    font-family: "Courier New",Courier,monospace;
+    line-height: 1em;
+    font-weight: 700;
+    content: "+";
+    background-color: transparent;
+    padding: 0 !important;
+    font-size: 1.15em;
+}
+table.dataTable.dtr-inline.collapsed>tbody>tr.parent>td.dtr-control:before {
+    background-color: transparent;
+    color: #177dc1;
+    box-shadow: 0 0.03em 0.1em #00000082;
+}
+
+
+.icon-btn-sm {
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    font-size: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1 !important;
 }

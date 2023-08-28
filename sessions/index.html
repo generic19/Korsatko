@@ -18,6 +18,10 @@
     <link rel="stylesheet" href="/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="/plugins/adminlte/css/adminlte-rtl.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
 
     <link rel="stylesheet" href="/dist/css/style.css">
 </head>
@@ -219,7 +223,7 @@
                 <section class="container content-header mb-2">
                     <div class="px-3 px-sm-2 px-lg-3">
                         <div class="row mt-3 mb-1">
-                            <h1 class="arabic">إضافة مدرب</h1>
+                            <h1 class="arabic">المواعيد</h1>
                         </div>
 
                         <div class="row">
@@ -228,83 +232,42 @@
                                     <a href="#">الصفحة الرئيسية</a>
                                 </li>
                                 <li class="breadcrumb-item">
-                                    <a href="#">المدربين</a>
-                                </li>
-                                <li class="breadcrumb-item">
-                                    مدرب جديد
-                                </li>
+                                    المواعيد
                             </ol>
                         </div>
                     </div>
-                    
+
                 </section>
 
                 <!-- Main content -->
                 <section class="content pb-5">
                     <div class="container">
-                        <form method="post" action="#" class="card">
-                            <div class="card-body">
+                        <div class="card">
+                            <div class="card-body arabic">
                                 <div class="row">
-                                    <div class="col-12 col-md-6 form-group">
-                                        <label for="fullName">
-                                            <span class="arabic">الاسم بالكامل</span>
-                                        </label>
-                                        <input type="text" name="fullName" id="fullName" class="form-control arabic"
-                                            placeholder="عمرو عثمان الشرقاوي">
-                                    </div>
+                                    <div class="col-12 col-sm-8" id="tableButtons"></div>
 
-                                    <div class="col-12 col-md-6 form-group">
-                                        <label for="nationalId">
-                                            <span class="arabic">الرقم القومي</span>
-                                        </label>
-                                        <input type="text" name="nationalId" id="nationalId" class="form-control arabic"
-                                            placeholder="30102034567890">
-                                    </div>
-
-                                    <div class="col-12 col-md-6 form-group">
-                                        <label for="email">
-                                            <span class="arabic">البريد الالكتروني</span>
-                                        </label>
-
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text">
-                                                    <i class="fas fa-envelope"></i>
-                                                </span>
-                                            </div>
-
-                                            <input type="text" name="email" id="email" class="form-control"
-                                                placeholder="amr.othman@example.com">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-12 col-md-6 form-group">
-                                        <label for="phoneNumber">
-                                            <span class="arabic">رقم الهاتف</span>
-                                        </label>
-
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text">
-                                                    <i class="fas fa-phone"></i>
-                                                </span>
-                                            </div>
-
-                                            <input type="text" name="phoneNumber" id="phoneNumber"
-                                                class="form-control arabic" placeholder="01012312345">
-                                        </div>
+                                    <div class="col-12 col-sm-4">
+                                        <input type="text" id="search" class="form-control d-inline w-100 w-sm-auto float-left"
+                                            placeholder="بحث">
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="card-footer">
-                                <div class="">
-                                    <input type="submit" value="إضافة" class="btn btn-primary px-3 arabic">
-                                    <a href="#" class="btn btn-outline-danger px-3 arabic">إلغاء</a>
-                                </div>
+                                <table id="datatable" class="table table-hover">
+                                    <thead class="thead-light">
+                                        <tr>
+                                            <th>الكورس</th>
+                                            <th>المدرب</th>
+                                            <th>تاريخ البداية</th>
+                                            <th>تاريخ النهاية</th>
+                                            <th>الموعد الأسبوعي</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
                             </div>
-                        </form>
-
+                        </div>
                     </div>
                 </section>
                 <!-- /.content -->
@@ -334,6 +297,20 @@
             <!-- /.control-sidebar -->
         </div>
         <!-- ./wrapper -->
+        
+        
+        <!-- Element templates -->
+        <table class="d-none">
+            <td id="buttonsCellTemplate" class="text-nowrap d-none">
+                <a href="#" class="btn icon-btn-sm btn-outline-primary m-1">
+                    <i class="fas fa-edit"></i>
+                </a>
+                <a href="#" class="btn icon-btn-sm btn-outline-danger m-1">
+                    <i class="fas fa-trash"></i>
+                </a>
+            </td>
+        </table>
+        
 
         <!-- jQuery -->
         <script src="/plugins/jquery/jquery.min.js"></script>
@@ -343,9 +320,186 @@
         <script src="/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
         <!-- AdminLTE App -->
         <script src="/plugins/adminlte/js/adminlte.min.js"></script>
+        <!-- DataTables -->
+        <script src="/plugins/datatables/jquery.dataTables.min.js"></script>
+        <script src="/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+        <script src="/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+        <script src="/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+        <script src="/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+        <script src="/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+        <script src="/plugins/jszip/jszip.min.js"></script>
+        <script src="/plugins/pdfmake/pdfmake.min.js"></script>
+        <script src="/plugins/pdfmake/vfs_fonts.js"></script>
+        <script src="/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+        <script src="/plugins/datatables-buttons/js/buttons.print.min.js"></script>
+        <script src="/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
 
 
+        <script>
+            // Mock instructors:
+            
+            const instructorNames = [
+                "كامل كمال راشد حسام",
+                "حازم فرج عياض رمضان",
+                "رؤوف يامن عادل صفوان",
+                "خالد مجيد عامر حسام",
+                "منيب كاظم رياض رشاد",
+                "أمان فهمي غفار حليم",
+                "عاصي سماح عادل رمضان",
+                "مؤنس حذيفة رضا ياسر",
+                "ياسين المقداد ذاكر سامر",
+                "مجدي عطا رامز سفيان",
+            ];
+            
+            let _nextInstructorIndex = 0;
+            
+            const getNextInstructor = () => {
+                return instructorNames[_nextInstructorIndex++ % instructorNames.length];
+            }
+            
+            
+            // Mock courses:
+            
+            const dayNames = {
+                sun: "الأحد",
+                mon: "الاثنين",
+                tue: "الثلاثاء",
+                wed: "الأربعاء",
+                thu: "الخميس",
+                fri: "الجمعة",
+                sat: "السبت"
+            };
+            
+            const courses = {
+                1: {
+                    name: "أساسيات Python",
+                    sessions: [
+                        { id: 11, days: ["wed", "thu"], time: { start: "08:00", end: "10:00" }},
+                        { id: 12, days: ["sun", "tue"], time: { start: "13:00", end: "15:00" }},
+                        { id: 13, days: ["mon", "fri"], time: { start: "18:00", end: "20:00" }},
+                    ]
+                },
+                2: {
+                    name: "البرمجة الشيئية باستخدام Java",
+                    sessions: [
+                        { id: 21, days: ["sun", "tue"], time: { start: "09:00", end: "11:00" }},
+                        { id: 22, days: ["mon", "wed"], time: { start: "12:00", end: "14:00" }},
+                        { id: 23, days: ["thu", "sat"], time: { start: "20:00", end: "22:00" }},
+                    ]
+                },
+                3: {
+                    name: "تطوير حلول الويب باستخدام PHP",
+                    sessions: [
+                        { id: 31, days: ["wed", "thu"], time: { start: "09:00", end: "11:00" }},
+                        { id: 32, days: ["sun", "tue"], time: { start: "12:00", end: "14:00" }},
+                        { id: 33, days: ["mon", "fri"], time: { start: "20:00", end: "22:00" }},
+                    ]
+                },
+                4: {
+                    name: "Embedded C",
+                    sessions: [
+                        { id: 43, days: ["mon", "fri"], time: { start: "18:00", end: "20:00" }},
+                    ]
+                },
+                5: {
+                    name: "CCNA",
+                    sessions: [
+                        { id: 52, days: ["mon", "wed"], time: { start: "12:00", end: "14:00" }},
+                        { id: 53, days: ["thu", "sat"], time: { start: "20:00", end: "22:00" }},
+                    ]
+                },
+            };
+            
+            const formatSession = sesh => {
+                const formatTime = t => Intl.DateTimeFormat(
+                    "ar-EG",
+                    {
+                        hour: "numeric",
+                        minute: "2-digit",
+                    }
+                ).format(t).replace("ص", "صباحاً").replace("م", "مساءً");
+                
+                const timeStart = formatTime(new Date(`0000-01-01 ${sesh.time.start}:00`).getTime());
+                const timeEnd = formatTime(new Date(`0000-01-01 ${sesh.time.end}:00`).getTime());
+                
+                const days = sesh.days.map(d => dayNames[d]);
+                
+                return `${days.join(" و")} من ${timeStart} إلى ${timeEnd}`;
+            };
+            
+            
+            
+            $("document").ready(() => {
+                var t = $('#datatable')
+                    .DataTable({
+                        language: {
+                            url: "/plugins/datatables/locale/ar.json"
+                        },
+                        paging: true,
+                        lengthChange: false,
+                        searching: true,
+                        ordering: true,
+                        autoWidth: false,
+                        responsive: true,
+                        serverSide: false,
+                        initComplete: function () {
+                            const api = this.api();
 
+                            const addButtons = buttons => {
+                                new $.fn.dataTable.Buttons(api, { buttons });
+                                api.buttons().container().appendTo('#tableButtons');
+                            }
+                            
+                            addButtons(["colvis"]);
+                        },
+                        columnDefs: [
+                            { targets: [-1], orderable: false }
+                        ]
+                    });
+                    
+                $("#search").on("input", (e) => {
+                    const q = e.target.value;
+                    console.log(q);
+                    t.column(0).search(q).draw();
+                });
+                
+                
+                const buttonsCellTemplate = $("#buttonsCellTemplate");
+                buttonsCellTemplate.remove();
+                buttonsCellTemplate.removeClass("d-none");
+                
+                const formatSessionRow = (courseName, session) => {
+                    const startMonth = Math.floor(Math.random() * 6 + 1);
+                    const endMonth = Math.floor(Math.random() * 5) + 1 + startMonth;
+                    
+                    const tr = $("<tr></tr>");
+                    
+                    const cells = [
+                        $(`<td>${courseName}</td>`),
+                        $(`<td>${getNextInstructor()}</td>`),
+                        $(`<td>${new Date(2023, startMonth, 1).toISOString().split("T")[0]}</td>`),
+                        $(`<td>${new Date(2023, endMonth, 1).toISOString().split("T")[0]}</td>`),
+                        $(`<td>${formatSession(session)}</td>`),
+                        buttonsCellTemplate.clone(),
+                    ];
+                    
+                    tr.append(cells);
+                    console.log(tr[0]);
+                    
+                    return tr;
+                }
+                
+                const rows = [];
+                
+                for (let course of Object.values(courses)) {
+                    for (let session of course.sessions) {
+                        const row = formatSessionRow(course.name, session);
+                        t.row.add(row);
+                    }
+                }
+            });
+            
+        </script>
     </body>
 
 </html>
